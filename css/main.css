@@ -176,3 +176,30 @@ header .header__notification-button .header__notification-counter .header__notif
   text-align: center;
   width: 20px;
 }
+.main {
+  padding-top: 50px;
+}
+.main .container {
+  background: grey;
+}
+.main .book-card {
+  text-align: center;
+  background: #5674d7;
+  max-width: 200px;
+  padding: 20px;
+}
+.main .book-card img {
+  max-width: 160px;
+}
+.main .book-card .book-card__exchange,
+.main .book-card button {
+  width: 100%;
+}
+.main .book-card .book-card__book-disc {
+  width: 100%;
+  color: #fff;
+  font-family: Montserrat-Regular;
+  font-size: 12px;
+  background: tomato;
+  line-height: 120%;
+}

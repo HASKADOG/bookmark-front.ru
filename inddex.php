@@ -49,7 +49,28 @@
 		</div>
 	</header>
 
-	<div class="main"></div>
+	<section class="main">
+		<div class="container">
+			<div class="row justify-content-around">
+				<div class="col-auto gh">
+					<div class="book-card d-flex flex-column justify-content-center">
+						<div class="book-card__book-image">
+							<img src="img/books_img/book.jpg" alt="Обложка книги">
+						</div>
+						<div class="book-card__exchange">
+							<button>Обменяться</button>
+						</div>
+						<div class="book-card__book-disc">
+							описание	описание	описание	описание...
+						</div>
+						<div class="book-card__disc-show">
+							<i class="fas fa-caret-down"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<footer></footer>
 </body>
