@@ -25,7 +25,7 @@
 					<ul class="header__user-nav-inner">
 						<li>Профиль</li>
 						<li>Активные обмены</li>
-						<li>Добавить Книгу</li>
+						<li>Добавить Книгу или</li>
 					</ul>
 					</div>
 				</nav>
@@ -42,6 +42,7 @@
 						<div class="bell"><i class="far fa-bell"></i></div>
 						<div class="header__notification-counter">
 							<div class="header__notification-counter-center">10</div>
+
 						</div>
 					</div>
 				</col-1>
