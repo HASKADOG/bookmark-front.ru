@@ -129,9 +129,7 @@ header .header__user-nav ul li {
   margin-right: 20px;
 }
 header .header__user-nav ul li:hover {
-  font-family: Montserrat-Bold;
   text-decoration: underline;
-  margin-right: 12px;
 }
 header .header__user-nav .header__user-nav-inner {
   margin-bottom: 0px;
@@ -152,9 +150,8 @@ header .header__site-nav ul li {
   margin: 0px 0 0 20px;
 }
 header .header__site-nav ul li:hover {
-  font-family: Montserrat-Bold;
   text-decoration: underline;
-  margin: 0px 0 0 15px;
+  transition: 0.5s;
 }
 header .header__notification-button {
   position: relative;
