@@ -180,15 +180,17 @@ header .header__notification-button .header__notification-counter .header__notif
   padding-top: 50px;
 }
 .main .book-card {
+  overflow: hidden;
   border-radius: 3px;
   text-align: center;
-  background: #5674d7;
+  background: linear-gradient(45deg, #3b3fc7, #0084ff);
   max-width: 200px;
   padding: 20px 0 0 0;
 }
 .main .book-card img {
   max-width: 160px;
   margin: 0 20px 0 20px;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.5);
 }
 .main .book-card .book-card__exchange {
   width: 100%;
@@ -202,6 +204,7 @@ header .header__notification-button .header__notification-counter .header__notif
   border-radius: 2px;
   font-family: Montserrat-Regular;
   color: #fff;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.5);
 }
 .main .book-card .book-card__book-disc {
   padding: 10px 20px 8px 20px;
@@ -211,6 +214,7 @@ header .header__notification-button .header__notification-counter .header__notif
   background: #ff801f;
   line-height: 120%;
   border-radius: 0 0 3px 3px;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.5);
 }
 .main .book-card .book-card__disc-show {
   margin-top: 5xp;
