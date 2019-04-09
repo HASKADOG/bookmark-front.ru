@@ -223,15 +223,17 @@ header {
 //BOOK_CARDS
 .main	{
 	padding-top: 50px;
-
+	
 	.container {
-		
+		.gh{
+			padding: 40px;
+		}
 	}
 	
 	
 	.book-card	{
 		position: relative;
-		//overflow: hidden;
+		overflow: hidden;
 		border-radius: 3px;
 		text-align: center;
 		background: linear-gradient(45deg, #3b3fc7, #0084ff);
@@ -270,10 +272,15 @@ header {
 			.book-card__disc-show {
 				margin-top: 5xp;
 				font-size: 15px;
+				&:hover{
+						cursor: pointer;
+					}
 			}
 			
 
-
+			.show	{
+				transform: translateY(0%) !important;
+			}
 			.book-card__full-disc {
 				transition: transform 1s linear;
 				padding: 15px 10px 0 10px;
@@ -303,7 +310,8 @@ header {
 					color: #fff;
 					font-family: Montserrat-Regular;
 				}
-				.book-card__collaspse{
+				.book-card__collaspse {
+
 					button {
 						position: absolute;
 						left: 10px;
