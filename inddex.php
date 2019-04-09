@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
+
+
 	<header>
 		<div class="container header">
 			<div class="row header__row justify-content-start h-100">
@@ -48,7 +50,6 @@
 			</div>
 		</div>
 	</header>
-
 	<section class="main">
 		<div class="container">
 			<div class="row justify-content-center">
