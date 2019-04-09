@@ -61,13 +61,15 @@
 							<button>Обменяться</button>
 						</div>
 						<div class="book-card__book-disc">
-							описание	описание	описание	описание...
-						</div>
-						<div class="book-card__disc-show">
-							<i class="fas fa-caret-down"></i>
+							описание описание описание описание...
+
+							<div class="book-card__disc-show">
+								<i class="fas fa-caret-down"></i>
+							</div>
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</section>

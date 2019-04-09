@@ -179,27 +179,40 @@ header .header__notification-button .header__notification-counter .header__notif
 .main {
   padding-top: 50px;
 }
-.main .container {
-  background: grey;
-}
 .main .book-card {
+  border-radius: 3px;
   text-align: center;
   background: #5674d7;
   max-width: 200px;
-  padding: 20px;
+  padding: 20px 0 0 0;
 }
 .main .book-card img {
   max-width: 160px;
+  margin: 0 20px 0 20px;
 }
-.main .book-card .book-card__exchange,
-.main .book-card button {
+.main .book-card .book-card__exchange {
   width: 100%;
+  padding: 15px 20px 15px 20px;
+}
+.main .book-card .book-card__exchange button {
+  width: 100%;
+  height: 35px;
+  background: #ff801f;
+  border: none;
+  border-radius: 2px;
+  font-family: Montserrat-Regular;
+  color: #fff;
 }
 .main .book-card .book-card__book-disc {
-  width: 100%;
+  padding: 10px 20px 8px 20px;
   color: #fff;
   font-family: Montserrat-Regular;
   font-size: 12px;
-  background: tomato;
+  background: #ff801f;
   line-height: 120%;
+  border-radius: 0 0 3px 3px;
+}
+.main .book-card .book-card__disc-show {
+  margin-top: 5xp;
+  font-size: 15px;
 }

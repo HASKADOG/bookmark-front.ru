@@ -226,28 +226,45 @@ header {
 	padding-top: 50px;
 
 	.container {
-		background: grey;
+		
 	}
 	
 	
 	.book-card	{
+		border-radius: 3px;
 		text-align: center;
 		background: #5674d7;
 		max-width: 200px;
-		padding: 20px;
+		padding: 20px 0 0 0;
 			img {
 				max-width: 160px;
+				margin: 0 20px 0 20px;
 			}
-			.book-card__exchange, button{
+			.book-card__exchange	{
 				width: 100%;
+				padding: 15px 20px 15px 20px;
+				button {
+					width: 100%;
+					height: 35px;
+					background: #ff801f;
+					border: none;
+					border-radius: 2px;
+					font-family: Montserrat-Regular;
+					color: #fff;
+				}
 			}
-			.book-card__book-disc{
-				width: 100%;
+			.book-card__book-disc	{
+				padding: 10px 20px 8px 20px;
 				color: #fff;
 				font-family: Montserrat-Regular;
 				font-size: 12px;
-				background: tomato;
+				background: #ff801f;
 				line-height: 120%;
+				border-radius: 0 0 3px 3px;
+			}
+			.book-card__disc-show{
+				margin-top: 5xp;
+				font-size: 15px;
 			}
 	}
 }
