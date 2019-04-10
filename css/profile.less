@@ -1,0 +1,133 @@
+
+
+
+header{
+    background: linear-gradient(10deg, #3b3fc7, #0084ff);
+    height: 80px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.avatar-profile{
+    img{
+        border-radius: 5px;
+    }
+}
+
+.profile-info{
+    
+    //border: 2px solid #3b3fc7;
+    background: #E4E4E4;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    div{
+        margin: 10px 0 10px 0;
+    }
+    .profile-info-wrapper{
+        background: #fff;
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+    }
+    .profile-info__redact-profile{
+        
+        button{
+            background: #0084ff;
+            border: none;
+            border-radius: 5px;
+            height: 40px;
+            color: #fff;
+            transition: 0.2s;
+            &:hover{
+                background: #CD6262;
+            }
+        }
+    }
+    .profile-info__add-book{
+        
+        button{
+            background: #0084ff;
+            border: none;
+            border-radius: 5px;
+            height: 40px;
+            color: #fff;
+            transition: 0.2s;
+            &:hover{
+                background: #CD6262;
+            }
+        }
+    }
+}
+
+.users-book{
+
+    .users-book-card{  
+        background: linear-gradient(10deg, #3b3fc7, #0084ff);
+        border-radius: 5px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .users-book-card__img{
+            
+            img{
+             max-width: 50px;
+            }
+        }
+        .users-book-card__about-wrapper{
+            
+            font-size: 13px;
+
+            .users-book-card__name{
+                padding: 9px 7px 0 7px;
+                color: white;
+            }
+            .users-book-card__about-book{
+                height: 50%;
+                button, form{
+                    color: white;
+                    width: 100%;
+                    height: 100%;
+                    background: #65B0CC;
+                    border: none;
+                    transition: 0.5s;
+                    &:hover{
+                        background: #CD6262;
+                    }
+                }
+            }
+        }
+        .users-book-card__func-wrapper{
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            width: 30px;
+            .users-book-card__delete{
+                background: #D51212;
+                width: 100%;
+                height: 50%;
+                button{
+                    color: #fff;
+                    background: none;
+                    border: none;
+                    width: 100%;
+                    height: 100%;line-height: 2;
+                }
+            }
+            .users-book-card__redact{
+                background: #000000;
+                width: 100%;
+                height: 50%;
+                button{
+                    color: #fff;
+                    background: none;
+                    border: none;
+                    width: 100%;
+                    height: 100%;line-height: 2;
+                    text-align: center;
+                    i{
+                        transform: translateX(-2px);
+                    }
+                }
+            }
+
+        }
+    }
+}
