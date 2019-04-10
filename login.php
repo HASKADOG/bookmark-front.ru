@@ -10,22 +10,23 @@ BOOKCROSSING.COM -->
 	<title>Вход</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/fontawesome.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/register.css">
 </head>
 <body class="login_bcg">
-<div class="container-fluid login">
-	<div class="row justify-content-center align-content-center">
-		<div class="col-auto login__enter-word">Вход</div>
-		<div class="w-100"></div>
-		<div class="col login__form-row">
-			<form class="login__login-form" action="login.php" method="POST">
- 				<input placeholder="Login" class="login__input-login" type="text" name="login" >
- 				<br>
- 				<input placeholder="Password" class="login__input-password" type="password" name="password" >
- 				<br>
- 				<button class="login__button-submit" type="submit" name="do_login">Войти</button>
+<div class="container p-5 login ">
+	<div class="row h-100 justify-content-center align-items-center">
+		<div class="col-auto h-10p login-row">
+			<form action="login.php" method="POST">
+ 	
+ 				<input placeholder="Логин" type="text" name="login">
+ 				<input placeholder="Пароль" type="password" name="password">
+ 		
+ 		
+ 				<button type="submit" name="do_login">Войти</button>
+ 		
  			</form>
- 		</div>
+		</div>
+		
 	</div>
 </div>
 
