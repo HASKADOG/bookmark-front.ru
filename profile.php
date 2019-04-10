@@ -29,17 +29,26 @@
 				</div>
 				<div class="col">
 					<div class="profile-info">
-						<div class="profile-info__name">Имя: Дмитрий Сорокопудов</div>
+						<div class="profile-info-wrapper">
+							<div class="profile-info__name">Имя: Дмитрий Сорокопудов</div>
 						<div class="profile-info__login">Логин: cplasplas</div>
 						<div class="profile-info__email">E-mail: cplasplas16@gmail.com</div>
 						<div class="profile-info__status">Должность: Ученик 10А</div>
 						<div class="profile-info__about-user">Обо мне: Я люблю кошек, собак. Ненавижу химию и биологию. Обожаю программирование, изучаю ардуино.</div>
-						<div class="profile-info__redact-profile">
-							<form action="">
-								<button type="submit"><i class="fas fa-pencil-alt"></i> Редактировать профиль</button>
-							</form>
 						</div>
-					</div>
+						<div class="profile-info__redact-profile-wrapper d-flex flex-row">
+							<div class="profile-info__redact-profile mr-4">
+								<form action="">
+									<button type="submit"><i class="fas fa-pencil-alt"></i> Редактировать профиль</button>
+								</form>
+							</div>
+							<div class="profile-info__add-book">
+								<form action="">
+									<button type="submit"><i class="fas fa-plus"></i> Добавить книгу</button>
+								</form>
+							</div>
+					
+						</div>
 				</div>
 			</div>
 		</div>

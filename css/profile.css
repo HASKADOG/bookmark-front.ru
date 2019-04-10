@@ -1,28 +1,6 @@
-@font-face {
-  font-family: 'Montserrat-Regular';
-  src: url('../fonts/Montserrat-Regular.eot');
-  src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Regular.woff2') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat-Light';
-  src: url('../fonts/Montserrat-Light.eot');
-  src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Light.woff2') format('woff2'), url('../fonts/Montserrat-Light.woff') format('woff'), url('../fonts/Montserrat-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat-Bold';
-  src: url('../fonts/Montserrat-Bold.eot');
-  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Bold.woff2') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
 header {
   background: linear-gradient(10deg, #3b3fc7, #0084ff);
   height: 80px;
-  font-family: Montserrat-Bold;
   font-size: 15px;
   color: #fff;
 }
@@ -37,13 +15,10 @@ header {
 .profile-info div {
   margin: 10px 0 10px 0;
 }
-.profile-info .profile-info__about-user {
+.profile-info .profile-info-wrapper {
   background: #fff;
-  padding: 10px;
+  padding: 5px 10px 5px 10px;
   border-radius: 5px;
-}
-.profile-info .profile-info__redact-profile {
-  font-family: Montserrat-Regular;
 }
 .profile-info .profile-info__redact-profile button {
   background: #0084ff;
@@ -56,6 +31,17 @@ header {
 .profile-info .profile-info__redact-profile button:hover {
   background: #CD6262;
 }
+.profile-info .profile-info__add-book button {
+  background: #0084ff;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  color: #fff;
+  transition: 0.2s;
+}
+.profile-info .profile-info__add-book button:hover {
+  background: #CD6262;
+}
 .users-book .users-book-card {
   background: linear-gradient(10deg, #3b3fc7, #0084ff);
   border-radius: 5px;
@@ -66,7 +52,6 @@ header {
   max-width: 50px;
 }
 .users-book .users-book-card .users-book-card__about-wrapper {
-  font-family: Montserrat-Regular;
   font-size: 13px;
 }
 .users-book .users-book-card .users-book-card__about-wrapper .users-book-card__name {
