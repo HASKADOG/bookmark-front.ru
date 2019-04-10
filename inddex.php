@@ -50,7 +50,27 @@
 			</div>
 		</div>
 	</header>
+	<section class="search">
+		<div class="container">
+			<div class="row justify-content-between align-items-center">
+				<div class="col-3">
+					<div class="book-wrapper">
+						<div class="book-wrapper__books">КНИГИ</div>
+					</div>
+				</div>
+				<div class="col-3">
+					<div class="search-wrapper">
+						<form action="" class="search-wrapper__search-form  d-flex">
+							<input placeholder="" type="text">
+							<button type="submit">Поиск</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="main">
+
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-auto gh">
@@ -218,7 +238,9 @@
 		</div>
 	</section>
 
-	<footer></footer>
+	<footer>
+		<div class="container"><div class="row"></div></div>
+	</footer>
 
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

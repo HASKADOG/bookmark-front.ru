@@ -21,7 +21,7 @@
 }
 body,
 html {
-  height: 2000px;
+  background: linear-gradient(0deg, #3b3fc7, #0084ff);
 }
 .login_bcg {
   background-image: url("../img/login_bcg.png");
@@ -176,8 +176,47 @@ header .header__notification-button .header__notification-counter .header__notif
   text-align: center;
   width: 20px;
 }
+.search .container {
+  padding: 50px 50px 15px 50px;
+  background: #fff;
+}
+.search .book-wrapper {
+  height: 30px;
+  width: 230px;
+  background: linear-gradient(90deg, #3b3fc7, #ff801f);
+}
+.search .book-wrapper .book-wrapper__books {
+  color: #fff;
+  font-size: 54px;
+  word-spacing: 5px;
+  font-family: Montserrat-Regular;
+  text-shadow: 0 0 10px #000;
+  line-height: 30px;
+}
+.search .search-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+  min-width: 200px;
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.3);
+}
+.search .search-wrapper .search-wrapper__search-form input {
+  width: 68%;
+  height: 30px;
+  border: none;
+}
+.search .search-wrapper .search-wrapper__search-form button {
+  width: 32%;
+  background: #FF801F;
+  border: none;
+  font-family: Montserrat-Regular;
+  font-size: 15px;
+  color: #fff;
+}
 .main {
-  padding-top: 50px;
+  padding-top: 0px;
+}
+.main .container {
+  background: #fff;
 }
 .main .container .gh {
   padding: 40px;
@@ -271,4 +310,8 @@ header .header__notification-button .header__notification-counter .header__notif
   font-family: Montserrat-Regular;
   color: #fff;
   box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.5);
+}
+footer .container .row {
+  height: 300px;
+  background: linear-gradient(10deg, #3b3fc7, #0084ff);
 }
