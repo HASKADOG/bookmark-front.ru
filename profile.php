@@ -1,8 +1,24 @@
+<?php 
+require 'libs/bd.php';
+
+if (isset($_SESSION['logged_user']))
+	{
+		$user = R::load('users', $_SESSION['logged_user']->id);
+
+		if ($user->avatar_path == "empty"){
+			$user->avatar_path = "img/profile_img/not_found.png";
+		}
+	} else {
+		header("Location: login.php");
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Дмитрий Сорокопудов</title>
+	<title><?= $_SESSION['logged_user']->name . ' ' . $_SESSION['logged_user']->surname; ?></title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/fontawesome.min.css">
 	<link rel="stylesheet" href="css/profile.css">
@@ -24,28 +40,42 @@
 			<div class="row">
 				<div class="col-md-auto">
 					<div class="avatar-profile">
-						<img width="200px" src="img/profile_img/1547671809_2_Buddy.jpeg" alt="">
+						<img width="200px" src="<?php echo $user->avatar_path; ?>" alt="">
 					</div>
 				</div>
 				<div class="col">
 					<div class="profile-info">
 						<div class="profile-info-wrapper">
-							<div class="profile-info__name">Имя: Дмитрий Сорокопудов</div>
-						<div class="profile-info__login">Логин: cplasplas</div>
-						<div class="profile-info__email">E-mail: cplasplas16@gmail.com</div>
-						<div class="profile-info__status">Должность: Ученик 10А</div>
-						<div class="profile-info__about-user">Обо мне: Я люблю кошек, собак. Ненавижу химию и биологию. Обожаю программирование, изучаю ардуино.</div>
+							<div class="profile-info__name">Имя: <?= $_SESSION['logged_user']->name . ' ' . $_SESSION['logged_user']->surname; ?></div>
+						<div class="profile-info__login">Логин: <?= $user->login; ?></div>
+						<div class="profile-info__email">E-mail: <?= $_SESSION['logged_user']->email; ?></div>
+
+
+						<div class="profile-info__status">
+							
+
+						</div>
+
+						<?php if ($_SESSION['logged_user']->status == 'Ученик'): ?>
+							Должность: <?= $_SESSION['logged_user']->status; ?> <br>
+							Класс: <?= $_SESSION['logged_user']->klass . ' ' . $_SESSION['logged_user']->klassLiter; ?>
+							<?php else: ?>
+							Должность: <?= $_SESSION['logged_user']->status; ?>
+						<?php endif; ?>
+
+
+						<div class="profile-info__about-user">Обо мне: <?= $user->about_me; ?></div>
 						</div>
 						<div class="profile-info__redact-profile-wrapper d-flex flex-row">
 							<div class="profile-info__redact-profile mr-4">
 								<form action="">
-									<button type="submit"><i class="fas fa-pencil-alt"></i> Редактировать профиль</button>
+									<a href="profile-redaction.php"><i class="fas fa-pencil-alt"></i> Редактировать профиль</a>
 								</form>
 							</div>
 							<div class="profile-info__add-book">
-								<form action="">
-									<button type="submit"><i class="fas fa-plus"></i> Добавить книгу</button>
-								</form>
+								
+									<a href="book-add.php"><i class="fas fa-plus"></i> Добавить книгу</a>
+							
 							</div>
 					
 						</div>

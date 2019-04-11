@@ -104,6 +104,12 @@ header {
   padding: 10px 0 10px 0;
   color: #ffff;
 }
+header a {
+  color: #fff !important;
+}
+header a:visited {
+  color: #fff;
+}
 header .row {
   height: 100%;
 }

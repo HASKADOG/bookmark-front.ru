@@ -7,6 +7,7 @@
 		$name_link = "profile.php";
 		$exit_button = "";
 	} else {
+		header("Location: login.php");
 		$name = "Войти на сайт";
 		$name_link = "login.php";
 		$exit_button = "hidden";
@@ -43,9 +44,9 @@
 						<li class="header__exit-link <?php echo $exit_button; ?>"><a href="logout.php">Выйти</a></li>
 					</ul>
 					<ul class="header__user-nav-inner">
-						<li>Профиль</li>
+						<li><a href="profile.php">Профиль</a></li>
 						<li>Активные обмены</li>
-						<li>Добавить Книгу</li>
+						<li><a href="book-add.php">Добавить Книгу</a></li>
 					</ul>
 					</div>
 				</nav>
