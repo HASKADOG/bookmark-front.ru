@@ -130,8 +130,8 @@
 							'.$users_books['book_name'].'
 
 							<div class="book-card__disc-show">
-								<form action="book-redaction.php" method="GET">
-									<input type="hidden" name="book_id_1" value="'.$users_books['id'].'">
+								<form action="book-page.php" method="GET">
+									<input type="hidden" name="book_id" value="'.$users_books['id'].'">
 									<button style="border: none; background: none; color:#fff;" type="submit"><i class="fas fa-caret-down"></i></button>
 								</form>
 							</div>
