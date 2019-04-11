@@ -1,0 +1,26 @@
+body,
+html {
+  height: 100%;
+}
+.login {
+  background: linear-gradient(10deg, #3b3fc7, #0084ff);
+  padding: 20px;
+  border-radius: 5px;
+}
+.login input {
+  border-radius: 5px;
+  border: none;
+  height: 30px;
+  padding: 7px;
+}
+.login button {
+  border: none;
+  background: #0084FF;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  transition: 0.2s;
+}
+.login button:hover {
+  background: #CD6262;
+}
