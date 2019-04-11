@@ -3,7 +3,11 @@ body, html{
 
 }
 
-.login{
+.login{ 
+	box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.75);
+	z-index: 100;
+	width: 300px;
+	position: relative;
 	background: linear-gradient(10deg, #3b3fc7, #0084ff);
 	padding: 20px;
 	border-radius: 5px;
@@ -24,4 +28,19 @@ body, html{
           background: #CD6262;
       }
 	}
+	
+	}
+.errors{
+		background: tomato;
+		width: 300px;
+		transform: translateY(-100%);
+		z-index: 0;
+		border-radius: 5px;
+		transition: 0.3s;
+		padding: 10px;
+		text-align: center;
+		color: #fff;
+}
+.errors_active{
+	transform: translateY(-10%);
 }

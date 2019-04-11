@@ -122,6 +122,9 @@ body, html {
 }
 
 //HEADER
+.hidden{
+	display: none !important;
+}
 header {
 	background: linear-gradient(10deg, #3b3fc7, #0084ff);
 	height: 120px;
@@ -151,11 +154,23 @@ header {
 			.header__user-name	{
 				font-family: Montserrat-Bold;
 				font-size: 19px;
+				a{
+					color: #fff !important;
+					&:visited{
+						color: #fff;
+					}
+				}
 			}
 
 			.header__exit-link{
 				font-family: Montserrat-Light;
 				font-size: 11px;
+				a{
+					color: #fff;
+				}
+				&:visited{
+						color: #fff;
+					}
 			}
 
 			li {

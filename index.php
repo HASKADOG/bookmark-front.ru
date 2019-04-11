@@ -1,6 +1,16 @@
 <?php 
 	require 'libs/bd.php';
 
+	if (isset($_SESSION['logged_user']))
+	{
+		$name = $_SESSION['logged_user']->name;
+		$name_link = "profile.php";
+		$exit_button = "";
+	} else {
+		$name = "Войти на сайт";
+		$name_link = "login.php";
+		$exit_button = "hidden";
+	}
 	
  ?>
 
@@ -27,8 +37,10 @@
 				<nav class="col header__user-nav d-flex justify-content-start">
 					<div class="header__user-nav-wrapper">
 					<ul>
-						<li class="header__user-name">Дмитрий Сорокопудов</li>
-						<li class="header__exit-link">Выйти</li>
+						<li class="header__user-name">
+								<a href="<?php echo $name_link ?>"><? echo $name; ?></a>
+							</li>
+						<li class="header__exit-link <?php echo $exit_button; ?>"><a href="logout.php">Выйти</a></li>
 					</ul>
 					<ul class="header__user-nav-inner">
 						<li>Профиль</li>
