@@ -31,9 +31,9 @@
 
 	<header>
 		<div class="container header">
-			<div class="row header__row justify-content-start h-100">
+			<div class="row header__row justify-content-start align-items-center h-100">
 				<div class="col-auto header__avatar">
-					<img src="img/profile_img/1547671809_2_Buddy.jpeg" alt="Аватарка">
+					<img src="<?php echo $_SESSION['logged_user']->avatar_path; ?>" alt="Аватарка">
 				</div>
 				<nav class="col header__user-nav d-flex justify-content-start">
 					<div class="header__user-nav-wrapper">

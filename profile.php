@@ -116,6 +116,50 @@ if (isset($_SESSION['logged_user']))
 		
 					</div>
 				</div> <div class="w-100"></div>
+				
+				<?php 
+				$num_of_books = R::count('books');
+				
+
+
+				foreach ($user->ownBooksList as $users_books) {
+					if ($users_books->books_img == '') {
+						$img_path = 'img/site_images/not_found.png';
+					} else {
+						$img_path = $users_books->books_img;
+					} 
+					echo ' 
+						<div class="col-auto">
+					<div class="users-book-card d-flex flex-row">
+						<div class="users-book-card__img">
+							<img src="'.$img_path.'" alt="">
+						</div>
+						<div class="users-book-card__about-wrapper justify-content-between d-flex flex-column">
+							<div class="users-book-card__name">'.$users_books->book_name.'</div>
+							<div class="users-book-card__about-book"><form action=""><button>О книге</button></form></div>
+						</div>
+						<div class="users-book-card__func-wrapper justify-content-around d-flex flex-column align-items-center">
+							<div class="users-book-card__delete">
+								<form action="">
+									<button type="submit"><i class="fas fa-trash-alt"></i></button>
+								</form>
+							</div>
+							<div class="users-book-card__redact">
+								<form action="book-redaction.php">
+									<input type="hidden" name="book_id" value="'.$users_books->id.'">
+									<button type="submit"><i class="fas fa-pencil-alt"></i></button>
+								</form>
+							</div>
+						</div>
+						
+		
+					</div>
+				</div> <div class="w-100"></div>
+
+					';
+				}
+			 ?>
+
 
 			</div>
 		</div>

@@ -104,6 +104,9 @@ header {
   padding: 10px 0 10px 0;
   color: #ffff;
 }
+header .container {
+  height: 100%;
+}
 header a {
   color: #fff !important;
 }
