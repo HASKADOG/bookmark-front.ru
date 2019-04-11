@@ -50,6 +50,7 @@ header {
 }
 .users-book .users-book-card .users-book-card__img img {
   max-width: 50px;
+  min-height: 80px;
 }
 .users-book .users-book-card .users-book-card__about-wrapper {
   font-size: 13px;

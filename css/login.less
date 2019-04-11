@@ -1,0 +1,46 @@
+body, html{
+	height: 100%;
+
+}
+
+.login{ 
+	box-shadow: 0px 0px 41px 0px rgba(0,0,0,0.75);
+	z-index: 100;
+	width: 300px;
+	position: relative;
+	background: linear-gradient(10deg, #3b3fc7, #0084ff);
+	padding: 20px;
+	border-radius: 5px;
+	input{
+		border-radius: 5px;
+		border: none;
+		height: 30px;
+		padding: 7px;
+	}
+	button{
+		border: none;
+		background: #0084FF;
+		height: 40px;
+		border-radius: 5px;
+		color: #fff;
+		transition: 0.2s;
+      &:hover{
+          background: #CD6262;
+      }
+	}
+	
+	}
+.errors{
+		background: tomato;
+		width: 300px;
+		transform: translateY(-100%);
+		z-index: 0;
+		border-radius: 5px;
+		transition: 0.3s;
+		padding: 10px;
+		text-align: center;
+		color: #fff;
+}
+.errors_active{
+	transform: translateY(-10%);
+}

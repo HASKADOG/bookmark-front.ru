@@ -95,11 +95,23 @@ border-radius .login .login__login-form button:hover {
 .login .row {
   height: 100%;
 }
+.hidden {
+  display: none !important;
+}
 header {
   background: linear-gradient(10deg, #3b3fc7, #0084ff);
   height: 120px;
   padding: 10px 0 10px 0;
   color: #ffff;
+}
+header .container {
+  height: 100%;
+}
+header a {
+  color: #fff !important;
+}
+header a:visited {
+  color: #fff;
 }
 header .row {
   height: 100%;
@@ -121,9 +133,21 @@ header .header__user-nav ul .header__user-name {
   font-family: Montserrat-Bold;
   font-size: 19px;
 }
+header .header__user-nav ul .header__user-name a {
+  color: #fff !important;
+}
+header .header__user-nav ul .header__user-name a:visited {
+  color: #fff;
+}
 header .header__user-nav ul .header__exit-link {
   font-family: Montserrat-Light;
   font-size: 11px;
+}
+header .header__user-nav ul .header__exit-link a {
+  color: #fff;
+}
+header .header__user-nav ul .header__exit-link:visited {
+  color: #fff;
 }
 header .header__user-nav ul li {
   display: inline-block;

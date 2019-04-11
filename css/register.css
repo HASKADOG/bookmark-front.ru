@@ -1,0 +1,32 @@
+.register {
+  padding: 20px;
+  background: red;
+}
+.register input {
+  padding: 0 10px 0 10px;
+  border: none;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background: #fff;
+  margin: 9px 0 5px 0;
+}
+.register .redeo {
+  width: 20px;
+}
+.register button {
+  background: #0084ff;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  color: #fff;
+  transition: 0.2s;
+  width: 100%;
+}
+.register button:hover {
+  background: #CD6262;
+}
+.login-row {
+  background: red;
+}

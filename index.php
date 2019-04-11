@@ -1,3 +1,20 @@
+<?php 
+	require 'libs/bd.php';
+
+	if (isset($_SESSION['logged_user']))
+	{
+		$name = $_SESSION['logged_user']->name;
+		$name_link = "profile.php";
+		$exit_button = "";
+	} else {
+		header("Location: login.php");
+		$name = "Войти на сайт";
+		$name_link = "login.php";
+		$exit_button = "hidden";
+	}
+	
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,20 +31,22 @@
 
 	<header>
 		<div class="container header">
-			<div class="row header__row justify-content-start h-100">
+			<div class="row header__row justify-content-start align-items-center h-100">
 				<div class="col-auto header__avatar">
-					<img src="img/profile_img/1547671809_2_Buddy.jpeg" alt="Аватарка">
+					<img src="<?php echo $_SESSION['logged_user']->avatar_path; ?>" alt="Аватарка">
 				</div>
 				<nav class="col header__user-nav d-flex justify-content-start">
 					<div class="header__user-nav-wrapper">
 					<ul>
-						<li class="header__user-name">Дмитрий Сорокопудов</li>
-						<li class="header__exit-link">Выйти</li>
+						<li class="header__user-name">
+								<a href="<?php echo $name_link ?>"><? echo $name; ?></a>
+							</li>
+						<li class="header__exit-link <?php echo $exit_button; ?>"><a href="logout.php">Выйти</a></li>
 					</ul>
 					<ul class="header__user-nav-inner">
-						<li>Профиль</li>
+						<li><a href="profile.php">Профиль</a></li>
 						<li>Активные обмены</li>
-						<li>Добавить Книгу</li>
+						<li><a href="book-add.php">Добавить Книгу</a></li>
 					</ul>
 					</div>
 				</nav>
