@@ -50,13 +50,13 @@ header {
 }
 .users-book .users-book-card .users-book-card__img img {
   max-width: 50px;
-  min-height: 80px;
+  min-height: 100%;
 }
 .users-book .users-book-card .users-book-card__about-wrapper {
   font-size: 13px;
 }
 .users-book .users-book-card .users-book-card__about-wrapper .users-book-card__name {
-  padding: 9px 7px 0 7px;
+  padding: 9px 7px 9px 7px;
   color: white;
 }
 .users-book .users-book-card .users-book-card__about-wrapper .users-book-card__about-book {
