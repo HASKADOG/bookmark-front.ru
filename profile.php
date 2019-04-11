@@ -91,31 +91,7 @@ if (isset($_SESSION['logged_user']))
 	<section class="users-book">
 		<div class="container">
 			<div class="row">
-				<div class="col-auto">
-					<div class="users-book-card d-flex flex-row">
-						<div class="users-book-card__img">
-							<img src="img/books_img/book.jpg" alt="">
-						</div>
-						<div class="users-book-card__about-wrapper justify-content-between d-flex flex-column">
-							<div class="users-book-card__name">Зулейха Окрывает глаза</div>
-							<div class="users-book-card__about-book"><form action=""><button>О книге</button></form></div>
-						</div>
-						<div class="users-book-card__func-wrapper justify-content-around d-flex flex-column align-items-center">
-							<div class="users-book-card__delete">
-								<form action="">
-									<button type="submit"><i class="fas fa-trash-alt"></i></button>
-								</form>
-							</div>
-							<div class="users-book-card__redact">
-								<form action="">
-									<button type="submit"><i class="fas fa-pencil-alt"></i></button>
-								</form>
-							</div>
-						</div>
-						
-		
-					</div>
-				</div> <div class="w-100"></div>
+			
 				
 				<?php 
 				$num_of_books = R::count('books');
@@ -140,13 +116,14 @@ if (isset($_SESSION['logged_user']))
 						</div>
 						<div class="users-book-card__func-wrapper justify-content-around d-flex flex-column align-items-center">
 							<div class="users-book-card__delete">
-								<form action="">
+								<form action="delete-book.php" method="GET">
+									<input type="hidden" name="book_id" value="'.$users_books->id.'">
 									<button type="submit"><i class="fas fa-trash-alt"></i></button>
 								</form>
 							</div>
 							<div class="users-book-card__redact">
-								<form action="book-redaction.php">
-									<input type="hidden" name="book_id" value="'.$users_books->id.'">
+								<form action="book-redaction.php" method="GET">
+									<input type="hidden" name="book_id_1" value="'.$users_books->id.'">
 									<button type="submit"><i class="fas fa-pencil-alt"></i></button>
 								</form>
 							</div>

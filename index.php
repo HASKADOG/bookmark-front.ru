@@ -92,167 +92,58 @@
 
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-auto gh">
+				
+				<?php 
+				$all_books = R::getAll('select * from `books`');
+				foreach ($all_books as $users_books) { 
+					$owner = R::load('users', $users_books['users_id']);
+
+					$button_status = '';
+					$button_content = 'Обменятся';
+					if ($users_books['users_id'] == $_SESSION['logged_user']->id)
+					{
+						$button_status = 'disabled';
+						$button_content = 'Ваша книга';
+					} 
+
+					if (! $_SESSION['logged_user']->id) {
+						$button_status = 'disabled';
+						$button_content = 'Войдите на сайт';
+					}
+
+
+					if ($users_books['books_img'] == '') 
+					{
+						$img_path = 'img/site_images/not_found.png';
+					} else {
+						$img_path = $users_books['books_img'];
+					} 
+					echo '<div class="col-auto gh">
 					<div class="book-card  d-flex flex-column justify-content-center">
 						<div class="book-card__book-image">
-							<img src="img/books_img/book.jpg" alt="Обложка книги">
+							<img src="'.$img_path.'" alt="Обложка книги">
 						</div>
 						<div class="book-card__exchange">
 							<button>Обменяться</button>
 						</div>
 						<div class="book-card__book-disc">
-							описание описание описание описание...
+							'.$users_books['book_name'].'
 
 							<div class="book-card__disc-show">
-								<i class="fas fa-caret-down"></i>
+								<form action="book-redaction.php" method="GET">
+									<input type="hidden" name="book_id_1" value="'.$users_books['id'].'">
+									<button style="border: none; background: none; color:#fff;" type="submit"><i class="fas fa-caret-down"></i></button>
+								</form>
 							</div>
 						</div>
-						<div class="book-card__full-disc">
-							<div class="book-card__author">Стивен Кинг</div>
-							<div class="book-card__book-name">На Подъёме</div>
-							<i class="fas fa-arrows-alt-h book-card__book-delimeter"></i>
-							<div class="book-card__discription">Эту повесть Стивен Кинг написал к Хеллоуину. Скотт Кэри – разведенный компьютерный дизайнер. В его жизни все складывается не самым лучшим образом: от отношений с соседями до проблем со здоровьем, причину которых Скотт не может объяснить. до проблем со здоровьем, причину которых Скотт не может объяснить. </div>
-							<div class="book-card__collaspse">
-								<button>Свернуть</button>
-							</div>
-						</div>
+						
 					</div>
-				</div>
+				</div>';
+				}
 
-				<div class="col-auto gh">
-					<div class="book-card  d-flex flex-column justify-content-center">
-						<div class="book-card__book-image">
-							<img src="img/books_img/book.jpg" alt="Обложка книги">
-						</div>
-						<div class="book-card__exchange">
-							<button>Обменяться</button>
-						</div>
-						<div class="book-card__book-disc">
-							описание описание описание описание...
 
-							<div class="book-card__disc-show">
-								<i class="fas fa-caret-down"></i>
-							</div>
-						</div>
-						<div class="book-card__full-disc">
-							<div class="book-card__author">Стивен Кинг</div>
-							<div class="book-card__book-name">На Подъёме</div>
-							<i class="fas fa-arrows-alt-h book-card__book-delimeter"></i>
-							<div class="book-card__discription">Эту повесть Стивен Кинг написал к Хеллоуину. Скотт Кэри – разведенный компьютерный дизайнер. В его жизни все складывается не самым лучшим образом: от отношений с соседями до проблем со здоровьем, причину которых Скотт не может объяснить. до проблем со здоровьем, причину которых Скотт не может объяснить. </div>
-							<div class="book-card__collaspse">
-								<button>Свернуть</button>
-							</div>
-						</div>
-					</div>
-				</div>
+			 ?>
 
-				<div class="col-auto gh">
-					<div class="book-card  d-flex flex-column justify-content-center">
-						<div class="book-card__book-image">
-							<img src="img/books_img/book.jpg" alt="Обложка книги">
-						</div>
-						<div class="book-card__exchange">
-							<button>Обменяться</button>
-						</div>
-						<div class="book-card__book-disc">
-							описание описание описание описание...
-
-							<div class="book-card__disc-show">
-								<i class="fas fa-caret-down"></i>
-							</div>
-						</div>
-						<div class="book-card__full-disc">
-							<div class="book-card__author">Стивен Кинг</div>
-							<div class="book-card__book-name">На Подъёме</div>
-							<i class="fas fa-arrows-alt-h book-card__book-delimeter"></i>
-							<div class="book-card__discription">Эту повесть Стивен Кинг написал к Хеллоуину. Скотт Кэри – разведенный компьютерный дизайнер. В его жизни все складывается не самым лучшим образом: от отношений с соседями до проблем со здоровьем, причину которых Скотт не может объяснить. до проблем со здоровьем, причину которых Скотт не может объяснить. </div>
-							<div class="book-card__collaspse">
-								<button>Свернуть</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-auto gh">
-					<div class="book-card  d-flex flex-column justify-content-center">
-						<div class="book-card__book-image">
-							<img src="img/books_img/book.jpg" alt="Обложка книги">
-						</div>
-						<div class="book-card__exchange">
-							<button>Обменяться</button>
-						</div>
-						<div class="book-card__book-disc">
-							описание описание описание описание...
-
-							<div class="book-card__disc-show">
-								<i class="fas fa-caret-down"></i>
-							</div>
-						</div>
-						<div class="book-card__full-disc">
-							<div class="book-card__author">Стивен Кинг</div>
-							<div class="book-card__book-name">На Подъёме</div>
-							<i class="fas fa-arrows-alt-h book-card__book-delimeter"></i>
-							<div class="book-card__discription">Эту повесть Стивен Кинг написал к Хеллоуину. Скотт Кэри – разведенный компьютерный дизайнер. В его жизни все складывается не самым лучшим образом: от отношений с соседями до проблем со здоровьем, причину которых Скотт не может объяснить. до проблем со здоровьем, причину которых Скотт не может объяснить. </div>
-							<div class="book-card__collaspse">
-								<button>Свернуть</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-auto gh">
-					<div class="book-card  d-flex flex-column justify-content-center">
-						<div class="book-card__book-image">
-							<img src="img/books_img/book.jpg" alt="Обложка книги">
-						</div>
-						<div class="book-card__exchange">
-							<button>Обменяться</button>
-						</div>
-						<div class="book-card__book-disc">
-							описание описание описание описание...
-
-							<div class="book-card__disc-show">
-								<i class="fas fa-caret-down"></i>
-							</div>
-						</div>
-						<div class="book-card__full-disc">
-							<div class="book-card__author">Стивен Кинг</div>
-							<div class="book-card__book-name">На Подъёме</div>
-							<i class="fas fa-arrows-alt-h book-card__book-delimeter"></i>
-							<div class="book-card__discription">Эту повесть Стивен Кинг написал к Хеллоуину. Скотт Кэри – разведенный компьютерный дизайнер. В его жизни все складывается не самым лучшим образом: от отношений с соседями до проблем со здоровьем, причину которых Скотт не может объяснить. до проблем со здоровьем, причину которых Скотт не может объяснить. </div>
-							<div class="book-card__collaspse">
-								<button>Свернуть</button>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-auto gh">
-					<div class="book-card  d-flex flex-column justify-content-center">
-						<div class="book-card__book-image">
-							<img src="img/books_img/book.jpg" alt="Обложка книги">
-						</div>
-						<div class="book-card__exchange">
-							<button>Обменяться</button>
-						</div>
-						<div class="book-card__book-disc">
-							описание описание описание описание...
-
-							<div class="book-card__disc-show">
-								<i class="fas fa-caret-down"></i>
-							</div>
-						</div>
-						<div class="book-card__full-disc">
-							<div class="book-card__author">Стивен Кинг</div>
-							<div class="book-card__book-name">На Подъёме</div>
-							<i class="fas fa-arrows-alt-h book-card__book-delimeter"></i>
-							<div class="book-card__discription">Эту повесть Стивен Кинг написал к Хеллоуину. Скотт Кэри – разведенный компьютерный дизайнер. В его жизни все складывается не самым лучшим образом: от отношений с соседями до проблем со здоровьем, причину которых Скотт не может объяснить. до проблем со здоровьем, причину которых Скотт не может объяснить. </div>
-							<div class="book-card__collaspse">
-								<button>Свернуть</button>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>

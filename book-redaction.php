@@ -6,16 +6,15 @@ $data = $_POST;
 
 if (isset($_SESSION['logged_user']))
 	{
-		$book = R::load('books', 2);//$_GET['book_id']
+		$book = R::load('books', $_GET['book_id_1']);//$_GET['book_id']
 	} else {
 		header("Location: login.php");
 	}
 
 if ($book->users_id == $_SESSION['logged_user']->id)
 {
-	echo "Все норм!";
 } else {
-	$errors[] = "Эта книга вам не принадлежит! Положите на место!!!";
+	//$errors[] = "Эта книга вам не принадлежит! Положите на место!!!";
 }
 
 if (isset($data['accep_change'])){
