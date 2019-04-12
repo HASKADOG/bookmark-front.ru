@@ -171,7 +171,7 @@ $recepients_book = R::load('books', $data['recepientbookid']);*/
 					}
 
 					echo '
-						<div class="container exchange">
+						<div class="container-fluid exchange">
 						<div class="row justify-content-center">
 					<div class="col-11 d-flex flex-row align-items-center">
 						<div class="owner">'.$exchanges['donor_name'].'</div>
@@ -179,18 +179,18 @@ $recepients_book = R::load('books', $data['recepientbookid']);*/
 						<div class="owners-book-name">'.$exc_donors_book->book_name.'</div>
 						<div class="owners-book-author">'.$exc_donors_book->book_author.'</div>
 						<div class="recep">'.$exchanges['recepients_name'].'</div>
-						<div class="receps-book-wrapper"><img src="img/books_img/book.jpg" width="50px" alt=""></div>
-						<div class="receps-book-name">Как дед убил копыто</div>
-						<div class="receps-book-author">Достоевский</div>
-						<div class="date">121212</div>
-						<div class="status">сука</div>
+						<div class="receps-book-wrapper"><img src="'.$img_path_d.'" width="50px" alt=""></div>
+						<div class="receps-book-name">'.$exc_recepients_book->book_name.'</div>
+						<div class="receps-book-author">'.$exc_recepients_book->book_author.'</div>
+						<div class="date">'.date('d.m.Y', $exchanges['time']).'</div>
+						<div class="status">'.$status.'</div>
 						<div class="actions d-flex justify-content-center flex-column">
 							<form action="exchange-accept.php" method="POST">
 								<input type="hidden" name="exchangeid" value="'. $exchanges['id'] .'">
 								<input type="hidden" name="whois" value="'. $_SESSION['logged_user']->id .'">
-								<button>Согласие</button>
-								<button>Согласие</button>
-								<button>Согласие</button>
+								'.$operate_button.
+									$cancel_button .
+									$delete_button.'
 							</form>
 						</div>
 					</div>
@@ -200,7 +200,7 @@ $recepients_book = R::load('books', $data['recepientbookid']);*/
 				}
 				
 			?>
-			<div class="container exchange">
+		<!-- 	<div class="container exchange">
 				<div class="row justify-content-center">
 					<div class="col-11 d-flex flex-row align-items-center">
 						<div class="owner">Админ</div>
@@ -224,6 +224,6 @@ $recepients_book = R::load('books', $data['recepientbookid']);*/
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 </body>
 </html>
