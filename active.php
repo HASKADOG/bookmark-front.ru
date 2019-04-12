@@ -2,7 +2,7 @@
 require 'libs/bd.php';
 
 $active_exc = R::getAll('select * from `exchanges` where `donor_id`= ? or `recepient_id` = ?', array($_SESSION['logged_user']['id'], $_SESSION['logged_user']['id']));
-print_r($active_exc);
+
 /*$donor = R::load('users', $data['donorid']);
 $recepient = R::load('users', $data['recepientid']);
 $donors_book = R::load('books', $data['donorbookid']);
@@ -47,7 +47,8 @@ $recepients_book = R::load('books', $data['recepientbookid']);*/
 					//don't show if offer have been deleted
 
 
-					echo '<table>';	
+					
+
 					$number += 1;
 
 					//db_connection

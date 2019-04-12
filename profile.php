@@ -112,7 +112,11 @@ if (isset($_SESSION['logged_user']))
 						</div>
 						<div class="users-book-card__about-wrapper justify-content-between d-flex flex-column">
 							<div class="users-book-card__name">'.$users_books->book_name.'</div>
-							<div class="users-book-card__about-book"><form action=""><button>О книге</button></form></div>
+							<div class="users-book-card__about-book">
+							<form action="book-page.php" method="GET">
+							<input type="hidden" name="book_id" value="'.$users_books['id'].'">
+							<button type="submit" >О книге</button></form></div>
+
 						</div>
 						<div class="users-book-card__func-wrapper justify-content-around d-flex flex-column align-items-center">
 							<div class="users-book-card__delete">
