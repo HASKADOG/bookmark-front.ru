@@ -45,27 +45,15 @@
 					</ul>
 					<ul class="header__user-nav-inner">
 						<li><a href="profile.php">Профиль</a></li>
-						<li>Активные обмены</li>
+						<li><a href="active.php">Активные обмены</a></li>
 						<li><a href="book-add.php">Добавить Книгу</a></li>
 					</ul>
 					</div>
 				</nav>
 
-				<nav class="col-3 header__site-nav d-flex align-items-center justify-content-end">
-					<ul class="header__site-nav-inner">
-						<li>Книги</li>
-						<li>Пользователи</li>
-					</ul>
-				</nav>
+				
 
-				<col-1 class="header__notifications align-items-center d-flex">
-					<div class="header__notification-button">
-						<div class="bell"><i class="far fa-bell"></i></div>
-						<div class="header__notification-counter">
-							<div class="header__notification-counter-center">10</div>
-						</div>
-					</div>
-				</col-1>
+				
 			</div>
 		</div>
 	</header>
@@ -77,14 +65,7 @@
 						<div class="book-wrapper__books">КНИГИ</div>
 					</div>
 				</div>
-				<div class="col-3">
-					<div class="search-wrapper">
-						<form action="" class="search-wrapper__search-form  d-flex">
-							<input placeholder="" type="text">
-							<button type="submit">Поиск</button>
-						</form>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 	</section>
@@ -124,7 +105,11 @@
 							<img src="'.$img_path.'" alt="Обложка книги">
 						</div>
 						<div class="book-card__exchange">
-							<button>Обменяться</button>
+							<form action="exchange.php" method="POST">
+									<input type="hidden" name="book_id" value="'.$users_books['id'].'">
+									<button '.$button_status.' style="border: none; background: none; color:#fff;" type="submit">'.$button_content.'</button>
+								</form>
+							
 						</div>
 						<div class="book-card__book-disc">
 							'.$users_books['book_name'].'

@@ -111,3 +111,20 @@ header {
 .users-book .users-book-card .users-book-card__func-wrapper .users-book-card__redact button i {
   transform: translateX(-2px);
 }
+.exchange {
+  background: #E1E1E1;
+  border-radius: 5px;
+  padding: 5px;
+}
+.exchange div {
+  background: white;
+  margin: 5px;
+  border-radius: 5px;
+}
+.exchange button {
+  background: #1769E9;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  color: #fff;
+}

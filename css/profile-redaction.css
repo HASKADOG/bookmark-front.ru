@@ -48,3 +48,12 @@ header {
   border: none;
   padding: 0 10px 0 10px;
 }
+.my_book {
+  padding: 5px;
+}
+.my_book div {
+  padding: 0 5px 0 5px;
+}
+.my_book button {
+  margin-top: 0;
+}
